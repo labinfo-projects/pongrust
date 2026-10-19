@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="utf-8">
+    <title>Rust Pong - Giorgio Ruffa</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        canvas {
+            outline: none;
+            width: 100%;
+            height: 100%;
+            background-color: #000;
+            object-fit: contain; /* Mantiene le proporzioni e si adatta a qualsiasi finestra */
+        }
+    </style>
+</head>
+<body>
+    <canvas id="glcanvas" tabindex='1'></canvas>
+    
+    <!-- Registrazione dei plugin richiesta dal bundle -->
+    <script>
+        window.plugins = [];
+        window.register_plugin = function(plugin) {
+            window.plugins.push(plugin);
+        };
+    </script>
+    
+    <!-- Bundle ufficiale Macroquad -->
+    <script src="https://cdn.jsdelivr.net/gh/not-fl3/macroquad@master/js/mq_js_bundle.js"></script>
+    <!-- Avvio del modulo Wasm -->
+    <script>
+        load("pongrust.wasm");
+    </script>
+</body>
+</html>
