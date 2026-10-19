@@ -76,7 +76,7 @@ Clona il repository ed esegui il progetto tramite Cargo:
 
 ```bash
 git clone https://github.com/labinfo-projects/pongrust.git
-cd rust-pong
+cd pongrust\pongrust
 cargo build --release
 ```
 Accertarsi di spostare l'eseguibile ottenuto, presente nella cartella target\release, nella cartella base che contiene la cartella assets
